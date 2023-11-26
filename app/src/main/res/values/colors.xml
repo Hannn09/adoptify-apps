@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- kode FF -> 100%  -->
+    <!-- kode BF -> 75%  -->
+    <!-- kode B3 -> 70%  -->
+    <!-- kode 80 -> 50%  -->
+    <!-- kode 4D -> 30%  -->
+    <!-- kode 33 -> 20%  -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#FFFE9902</color>
+    <color name="dotNotSelected">#80FE9902</color>
+    <color name="headerColor">#FF1E1E1E</color>
+    <color name="regularTextColor">#BF1E1E1E</color>
+    <color name="titleColor">#FF303030</color>
+    <color name="descriptionColor">#B3303030</color>
+    <color name="tabNotSelectedColor">#80303030</color>
+    <color name="timeColor">#4D303030</color>
+    <color name="backgroundCardNotification">#80FFE0B2</color>
+    <color name="backgroundSlide">#FFF3F3F3</color>
+    <color name="backgroundTab">#33FE9902</color>
+</resources>

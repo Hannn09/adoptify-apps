@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_header"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ic_arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_extra"
+        android:text="@string/about_us"
+        android:layout_marginTop="68dp"
+        android:layout_marginStart="32dp"
+        android:textSize="28sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ic_arrow"
+        app:layout_constraintStart_toEndOf="@id/ic_arrow" />
+
+    <ImageView
+        android:id="@+id/ic_notification"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintEnd_toStartOf="@+id/ic_bars"
+        app:layout_constraintTop_toTopOf="@+id/notification"
+        app:layout_constraintBottom_toBottomOf="@+id/notification"/>
+
+    <ImageView
+        android:id="@+id/ic_bars"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_bars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/notification"
+        app:layout_constraintBottom_toBottomOf="@+id/notification"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="25dp"
+        android:paddingHorizontal="32dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/ic_arrow">
+
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:layout_height="30dp"
+            android:background="@drawable/background_selected_tab"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_tab"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="0dp"
+            app:tabTextColor="@color/tabNotSelectedColor"
+            app:tabTextAppearance="@style/TabFont"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@null"
+            app:tabRippleColor="@null"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

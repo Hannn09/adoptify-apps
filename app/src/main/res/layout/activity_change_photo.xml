@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.profile.changePhoto.ChangePhotoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ic_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvChangePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/plus_jakarta_sans_extra"
+            android:text="@string/change_profile"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_arrow"
+            app:layout_constraintStart_toEndOf="@id/ic_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/plus_jakarta_sans_semibold"
+            android:text="@string/photo_profile"
+            android:textColor="@color/titleColor"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvChangePhoto" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_profile_view"
+            android:padding="38dp"
+            app:srcCompat="@drawable/ic_profile_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvProfile"/>
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_take_photo"
+            app:backgroundTint="@color/descriptionColor"
+            android:text="@string/take_photo"
+            android:textSize="12sp"
+            android:fontFamily="@font/plus_jakarta_sans_regular"
+            android:drawableLeft="@drawable/ic_take_photo"
+            android:textColor="@color/regularTextColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cameraButton"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/choose_image"
+            android:textSize="12sp"
+            android:fontFamily="@font/plus_jakarta_sans_regular"
+            android:drawableLeft="@drawable/ic_choose_image"
+            android:textColor="@color/white"
+            android:background="@drawable/background_button"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@id/galleryButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="55dp"
+            android:src="@drawable/profile_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cameraButton"/>
+
+        <TextView
+            android:id="@+id/tvBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:text="@string/photo_profile_banner"
+            android:textColor="@color/titleColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageProfile" />
+
+        <Button
+            android:id="@+id/btnSaveChanged"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save_change"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/background_button"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:textSize="12sp"
+            app:backgroundTint="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBanner"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    
+</ScrollView>

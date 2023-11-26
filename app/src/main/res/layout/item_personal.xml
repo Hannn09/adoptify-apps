@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#F8F8F8"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/tvPersonal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal"
+            android:textSize="18sp"
+            android:textColor="@color/titleColor"
+            android:fontFamily="@font/plus_jakarta_sans_semibold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ic_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_profile"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPersonal"/>
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal"
+            android:textSize="16sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/descriptionColor"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            app:layout_constraintStart_toEndOf="@+id/ic_profile"
+            app:layout_constraintTop_toTopOf="@id/ic_profile"
+            app:layout_constraintBottom_toBottomOf="@id/ic_profile"/>
+
+
+        <ImageView
+            android:id="@+id/ic_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_digital"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ic_profile"/>
+
+        <TextView
+            android:id="@+id/tvWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallet_digital"
+            android:textSize="16sp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/descriptionColor"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            app:layout_constraintStart_toEndOf="@+id/ic_wallet"
+            app:layout_constraintTop_toTopOf="@id/ic_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/ic_wallet"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

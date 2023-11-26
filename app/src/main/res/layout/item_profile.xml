@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <ImageView
+        android:id="@+id/parentProfile"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:src="@drawable/background_user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/profileUser"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/profile_user"
+        app:layout_constraintTop_toTopOf="@id/parentProfile"
+        app:layout_constraintBottom_toTopOf="@id/parentProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:textSize="18sp"
+        android:textColor="@color/titleColor"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/profileUser"
+        app:layout_constraintStart_toStartOf="@id/parentProfile"
+        app:layout_constraintEnd_toEndOf="@id/parentProfile"/>
+
+    <TextView
+        android:id="@+id/emailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_email"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="16sp"
+        android:textColor="@color/descriptionColor"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        app:layout_constraintStart_toStartOf="@id/parentProfile"
+        app:layout_constraintEnd_toEndOf="@id/parentProfile"/>
+
+    <ImageView
+        android:id="@+id/diamond"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/diamond"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="@id/parentProfile"
+        app:layout_constraintTop_toBottomOf="@id/emailUser"/>
+
+    <TextView
+        android:id="@+id/descriptionDiamond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/diamond_membership"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/regularTextColor"
+        app:layout_constraintStart_toEndOf="@+id/diamond"
+        app:layout_constraintTop_toTopOf="@id/diamond"
+        app:layout_constraintBottom_toBottomOf="@id/diamond"/>
+
+    <TextView
+        android:id="@+id/pointDiamond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_point"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="70dp"
+        android:textColor="@color/regularTextColor"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/diamond"
+        app:layout_constraintBottom_toBottomOf="@id/diamond"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

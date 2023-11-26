@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/card_cloud"
+        layout="@layout/card_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoUniversity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/itn"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="@id/card_cloud"
+        app:layout_constraintTop_toBottomOf="@+id/card_cloud"/>
+
+    <TextView
+        android:id="@+id/name_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reihan Almas Hediawan"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/titleColor"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/card_cloud"
+        app:layout_constraintStart_toEndOf="@id/logoUniversity"/>
+
+    <TextView
+        android:id="@+id/id_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cohort ID: A401BSY2400"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="16sp"
+        android:textColor="@color/tabNotSelectedColor"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/name_student"
+        app:layout_constraintStart_toEndOf="@id/logoUniversity"/>
+
+    <ImageView
+        android:id="@+id/imageVerified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_verified"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/logoUniversity"
+        app:layout_constraintTop_toBottomOf="@+id/id_student"/>
+
+    <TextView
+        android:id="@+id/status_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active Member"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/id_student"
+        app:layout_constraintStart_toEndOf="@id/imageVerified"/>
+
+    <ImageView
+        android:id="@+id/logoUniversity_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/uns"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="@id/card_cloud"
+        app:layout_constraintTop_toBottomOf="@+id/imageVerified"/>
+
+    <TextView
+        android:id="@+id/name_student_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reza Liana"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/titleColor"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/imageVerified"
+        app:layout_constraintStart_toEndOf="@id/logoUniversity_2"/>
+
+    <TextView
+        android:id="@+id/id_student_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cohort ID: A312BSX2864"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="16sp"
+        android:textColor="@color/tabNotSelectedColor"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/name_student_2"
+        app:layout_constraintStart_toEndOf="@id/logoUniversity_2"/>
+
+    <ImageView
+        android:id="@+id/imageVerified_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_verified"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/logoUniversity_2"
+        app:layout_constraintTop_toBottomOf="@+id/id_student_2"/>
+
+    <TextView
+        android:id="@+id/status_student_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Active Member"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/id_student_2"
+        app:layout_constraintStart_toEndOf="@id/imageVerified_2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
