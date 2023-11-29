@@ -3,16 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/welcomeActivity">
-
-    <activity
-        android:id="@+id/welcomeActivity"
-        android:name="com.example.adoptify.ui.welcome.WelcomeActivity"
-        android:label="activity_welcome"
-        tools:layout="@layout/activity_welcome" />
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="com.example.adoptify.ui.login.LoginActivity"
-        android:label="activity_login"
-        tools:layout="@layout/activity_login" />
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.adoptify.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.adoptify.ui.bookmark.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+    <fragment
+        android:id="@+id/shelterFragment"
+        android:name="com.example.adoptify.ui.shelter.ShelterFragment"
+        android:label="fragment_shelter"
+        tools:layout="@layout/fragment_shelter" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.adoptify.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

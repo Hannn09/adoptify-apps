@@ -28,19 +28,17 @@
             android:name=".ui.profile.changePhoto.ChangePhotoActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.welcome.WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.profile.ProfileActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.notification.NotificationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.welcome.WelcomeActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -59,4 +59,25 @@
     <string name="start">Mulai</string>
     <string name="login">Masuk</string>
     <string name="register">Buat akun\nbarumu!</string>
+    <string name="btnregister">Buat akun baru</string>
+    <string name="email">Email\n</string>
+    <string name="checkbox_account">Simpan informasi akun</string>
+    <string name="forget_account">Lupa kata sandi?\n</string>
+    <string name="no_account">Belum memiliki akun?</string>
+    <string name="daftar">Daftar</string>
+    <string name="have_account">Sudah memiliki akun?\n</string>
+    <string name="hubungkan_akun">Hubungkan\nakunmu!</string>
+    <string name="greeting">Selamat siang!</string>
+    <string name="dummy_user">Ny. Azizi Shafaa</string>
+    <string name="dummy_name_pet">Cat House CF</string>
+    <string name="desc_pet_house"><![CDATA[Pusat penampungan\nkucing & lainnya]]></string>
+    <string name="dummy_distance">200 meter</string>
+    <string name="logout">Keluar</string>
+    <string name="find_shelter">Temukan\nShelter</string>
+    <string name="activity">Aktivitas</string>
+    <string name="news">Berita</string>
+    <string name="settings">Pengaturan</string>
+    <string name="title_home">Home</string>
+    <string name="title_bookmark">Bookmark</string>
+    <string name="title_shelter">Shelter</string>
 </resources>

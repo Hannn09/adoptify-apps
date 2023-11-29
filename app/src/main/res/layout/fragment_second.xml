@@ -26,9 +26,11 @@
     <Button
         android:id="@+id/btnStart"
         android:layout_width="302dp"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:text="@string/start"
+        android:textAllCaps="false"
         android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:background="@drawable/background_welcome_button"
         android:textSize="20sp"
         android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
