@@ -21,8 +21,13 @@ class MainActivity : AppCompatActivity() {
 
         val navView: BottomNavigationView = activityMainBinding.navView
 
+
         navView.setupWithNavController(navController)
 
         activityMainBinding.navView.itemIconTintList = null
+
+        activityMainBinding.fabBtn.setOnClickListener {
+            navController.navigate(R.id.petFragment)
+        }
     }
 }

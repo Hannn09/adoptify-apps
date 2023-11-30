@@ -80,4 +80,8 @@
     <string name="title_home">Home</string>
     <string name="title_bookmark">Bookmark</string>
     <string name="title_shelter">Shelter</string>
+    <string name="my_pet">Peliharaanku</string>
+    <string name="dummy_id">#452134</string>
+    <string name="age">Umur</string>
+    <string name="add_pet">Tambah peliharaan baru</string>
 </resources>

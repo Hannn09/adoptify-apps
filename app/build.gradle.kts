@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -87,6 +88,9 @@ dependencies {
 
     //circle image
     implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    //get image from internet
+    implementation("com.github.bumptech.glide:glide:4.13.2")
 
     //testing
     testImplementation("junit:junit:4.13.2")

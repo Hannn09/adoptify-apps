@@ -24,4 +24,9 @@
         android:name="com.example.adoptify.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/petFragment"
+        android:name="com.example.adoptify.ui.pet.PetFragment"
+        android:label="fragment_pet"
+        tools:layout="@layout/fragment_pet" />
 </navigation>

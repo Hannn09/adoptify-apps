@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ic_gender"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_gender_pet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:textSize="8dp"
+        android:textColor="@color/greetingTextColor"
+        app:layout_constraintTop_toTopOf="@id/ic_gender"
+        app:layout_constraintStart_toEndOf="@id/ic_gender"/>
+
+    <TextView
+        android:id="@+id/genderPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_regular"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        android:text="Betina"
+        app:layout_constraintStart_toStartOf="@id/gender"
+        app:layout_constraintTop_toBottomOf="@id/gender"/>
+
+    <ImageView
+        android:id="@+id/ic_age"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_age_pet"
+        app:layout_constraintStart_toEndOf="@id/gender"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:textSize="8dp"
+        android:textColor="@color/greetingTextColor"
+        app:layout_constraintTop_toTopOf="@id/ic_age"
+        app:layout_constraintStart_toEndOf="@id/ic_age"/>
+
+    <TextView
+        android:id="@+id/agePet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_regular"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        android:text="12 Bulan"
+        app:layout_constraintStart_toStartOf="@id/age"
+        app:layout_constraintTop_toBottomOf="@id/age"/>
+
+    <ImageView
+        android:id="@+id/ic_ras"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="40dp"
+        android:src="@drawable/ic_ras_pet"
+        app:layout_constraintStart_toEndOf="@id/agePet"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/ras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ras"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/plus_jakarta_sans_semibold"
+        android:textSize="8dp"
+        android:textColor="@color/greetingTextColor"
+        app:layout_constraintTop_toTopOf="@id/ic_ras"
+        app:layout_constraintStart_toEndOf="@id/ic_ras"/>
+
+    <TextView
+        android:id="@+id/rasPet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/plus_jakarta_sans_regular"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        android:text="Anggora"
+        app:layout_constraintStart_toStartOf="@id/ras"
+        app:layout_constraintTop_toBottomOf="@id/ras"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

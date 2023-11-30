@@ -11,7 +11,7 @@
         android:title="@string/title_bookmark" />
 
     <item
-        android:id="@+id/placeholder"
+        android:id="@+id/petFragment"
         android:title="" />
 
     <item

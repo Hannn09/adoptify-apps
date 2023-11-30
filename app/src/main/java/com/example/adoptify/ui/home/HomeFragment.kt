@@ -5,18 +5,48 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.adoptify.R
+import com.example.adoptify.databinding.FragmentHomeBinding
+import com.example.adoptify.model.dummyBanner
 
 
 class HomeFragment : Fragment() {
 
+    private var _homeFragment: FragmentHomeBinding? = null
+
+    private val homeFragment get() = _homeFragment!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        _homeFragment = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = homeFragment.root
+
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val viewPager = homeFragment.itemCaraousel
+        val dotsPagerAdapter = homeFragment.dotsIndicator
+
+        viewPager.apply {
+            clipChildren = false
+            clipToPadding = false
+            (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+            adapter = CaraouselAdapter(dummyBanner)
+        }
+
+        dotsPagerAdapter.attachTo(viewPager)
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _homeFragment = null
     }
 
 
