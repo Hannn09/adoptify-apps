@@ -84,6 +84,17 @@
     <string name="dummy_id">#452134</string>
     <string name="age">Umur</string>
     <string name="add_pet">Tambah peliharaan baru</string>
+    <string name="feature">Fitur Cepat</string>
+    <string name="see_all">Lihat semua</string>
+    <string name="adoption">Adopsi Hewan</string>
+    <string name="desc_dog">Lorem ipsum dolor sit\namet, consectetur\nadipiscing elit.</string>
+    <string name="see1">320 dilihat</string>
+    <string name="subHeadline">The quick brown fox jumps over the lazy dog</string>
+    <string name="news_content">Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Ut dapibus, mauris sed cursus\nmalesuada, elit mauris auctor leo, nec varius nunc\naugue sodales urna.</string>
+    <string name="desc_shelter">The quick brown fox jumps over the lazy dog</string>
+    <string name="shelter_content">Lorem ipsum dolor sit amet, consectetur\\nadipiscing elit. Ut dapibus, mauris sed cursus\\nmalesuada, elit mauris auctor leo, nec varius nunc\\naugue sodales urna.</string>
+    <string name="review">(1.678 ulasan)</string>
+    <string name="rate">4.0</string>
     <string name="filter">Saring daftar</string>
     <string name="about_app_description">Adoptify, an innovation of love for pets, is here with full\n
 dedication to bring warmth and affection to our loyal\n
