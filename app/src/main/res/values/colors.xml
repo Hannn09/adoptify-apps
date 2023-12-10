@@ -21,5 +21,10 @@
     <color name="backgroundCardNotification">#80FFE0B2</color>
     <color name="backgroundSlide">#FFF3F3F3</color>
     <color name="backgroundTab">#33FE9902</color>
+    <color name="backgroundHorizontalView">#FEEBC2</color>
     <color name="hintTextColor">#919290</color>
+    <color name="backgroundColor">#FEFFF7</color>
+    <color name="green">32CD32</color>
+
+
 </resources>

@@ -70,7 +70,7 @@
     <string name="greeting">Selamat siang!</string>
     <string name="dummy_user">Ny. Azizi Shafaa</string>
     <string name="dummy_name_pet">Cat House CF</string>
-    <string name="desc_pet_house"><![CDATA[Pusat penampungan kucing & lainnya]]></string>
+    <string name="desc_pet_house"><![CDATA[Pusat penampungan\nkucing & lainnya]]></string>
     <string name="dummy_distance">200 meter</string>
     <string name="logout">Keluar</string>
     <string name="find_shelter">Temukan\nShelter</string>
@@ -80,43 +80,9 @@
     <string name="title_home">Home</string>
     <string name="title_bookmark">Bookmark</string>
     <string name="title_shelter">Shelter</string>
-    <string name="my_pet">Peliharaanku</string>
-    <string name="dummy_id">#452134</string>
-    <string name="age">Umur</string>
-    <string name="add_pet">Tambah peliharaan baru</string>
     <string name="feature">Fitur Cepat</string>
     <string name="see_all">Lihat semua</string>
     <string name="adoption">Adopsi Hewan</string>
-    <string name="desc_dog">Lorem ipsum dolor sit\namet, consectetur\nadipiscing elit.</string>
     <string name="see1">320 dilihat</string>
-    <string name="subHeadline">The quick brown fox jumps over the lazy dog</string>
-    <string name="news_content">Lorem ipsum dolor sit amet, consectetur\nadipiscing elit. Ut dapibus, mauris sed cursus\nmalesuada, elit mauris auctor leo, nec varius nunc\naugue sodales urna.</string>
-    <string name="desc_shelter">The quick brown fox jumps over the lazy dog</string>
-    <string name="shelter_content">Lorem ipsum dolor sit amet, consectetur\\nadipiscing elit. Ut dapibus, mauris sed cursus\\nmalesuada, elit mauris auctor leo, nec varius nunc\\naugue sodales urna.</string>
-    <string name="review">(1.678 ulasan)</string>
-    <string name="rate">4.0</string>
-    <string name="filter">Saring daftar</string>
-    <string name="about_app_description">Adoptify, an innovation of love for pets, is here with full\n
-dedication to bring warmth and affection to our loyal\n
-friends. As a leading pet adoption application.\n\n
-
-Adoptify presents superior features that make it easier\n
-for users to go through the adoption journey and\n
-support pets who need help.</string>
-    <string name="about_app_description_2">We have surveyed more than 100 pet lovers around\n
-Malang. Around 90.1% of them stated that pet\n
-adoption apps are a good solution to promote\n
-adoption rather than purchasing pets from sellers\n
-or pet shops to get the pet a decent home.\n\n
-
-We also collected what urgency should be used as a\n
-feature if this idea is applied to users. Some of the\n
-surveys stated that they need an adoption feature for\n
-abandoned animals. Then, a call center feature is also\n
-required for users to get rescue regarding the nearest\n
-shelter/pet shop/vet.\n\n
-
-The last feature that is expected is a donation feature\n
-to help animals that need funds or are affected\n
-by illness without ownership.</string>
+    <string name="desc_dog">Lorem ipsum dolor sit\namet, consectetur\nadipiscing elit.</string>
 </resources>
