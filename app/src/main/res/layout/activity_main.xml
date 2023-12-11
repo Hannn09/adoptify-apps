@@ -9,23 +9,30 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         android:fitsSystemWindows="true"
-        android:paddingBottom="90dp"
+
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <fragment
-            android:id="@+id/fragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            android:layout_gravity="center"
-            app:navGraph="@navigation/main_navigation"/>
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/main_navigation" />
+
+        </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
-
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
@@ -40,15 +47,15 @@
             android:id="@+id/nav_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
             app:elevation="0dp"
-            app:itemRippleColor="@color/primaryColor"
-            app:itemBackground="@android:color/transparent"
             app:itemActiveIndicatorStyle="@drawable/line"
+            app:itemBackground="@android:color/transparent"
             app:itemIconTint="@color/white"
+            app:itemRippleColor="@color/primaryColor"
             app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/bottom_app_menu"
-            android:layout_marginEnd="16dp"/>
+            app:menu="@menu/bottom_app_menu" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -59,13 +66,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/primaryColor"
         android:textAlignment="center"
-        app:maxImageSize="40dp"
-        app:fabCustomSize="90dp"
-        app:borderWidth="3dp"
-        app:srcCompat="@drawable/ic_paw"
         app:backgroundTint="@color/white"
+        app:borderWidth="3dp"
         app:elevation="0dp"
+        app:fabCustomSize="90dp"
         app:layout_anchor="@id/bottomAppBar"
+        app:maxImageSize="40dp"
+        app:srcCompat="@drawable/ic_paw"
         app:tint="@android:color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -23,6 +23,10 @@ class AboutActivity : AppCompatActivity() {
         aboutActivity = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(aboutActivity.root)
 
+        aboutActivity.header.icArrow.setOnClickListener {
+            onBackPressed()
+        }
+
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
         val viewPager: ViewPager2 = aboutActivity.viewPager
         viewPager.adapter = sectionsPagerAdapter

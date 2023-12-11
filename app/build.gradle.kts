@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -91,6 +92,10 @@ dependencies {
 
     //get image from internet
     implementation("com.github.bumptech.glide:glide:4.13.2")
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
     //testing
     testImplementation("junit:junit:4.13.2")

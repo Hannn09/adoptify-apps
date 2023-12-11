@@ -24,7 +24,7 @@
     <color name="backgroundHorizontalView">#FEEBC2</color>
     <color name="hintTextColor">#919290</color>
     <color name="backgroundColor">#FEFFF7</color>
-    <color name="green">32CD32</color>
+    <color name="green">#32CD32</color>
 
 
 </resources>
