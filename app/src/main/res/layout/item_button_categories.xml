@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <ImageView
+        android:id="@+id/btn_cat"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/btn_cat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_cat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Kucing"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/btn_cat"
+        app:layout_constraintStart_toStartOf="@id/btn_cat"
+        app:layout_constraintEnd_toEndOf="@id/btn_cat"/>
+
+    <ImageView
+        android:id="@+id/btn_dog"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/btn_dog"
+        app:layout_constraintStart_toStartOf="@id/btn_cat"
+        app:layout_constraintEnd_toEndOf="@id/btn_turtle"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_dog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Anjing"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/btn_dog"
+        app:layout_constraintStart_toStartOf="@id/btn_dog"
+        app:layout_constraintEnd_toEndOf="@id/btn_dog"/>
+
+    <ImageView
+        android:id="@+id/btn_turtle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/btn_turtle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_turtle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Kura - Kura"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/btn_turtle"
+        app:layout_constraintStart_toStartOf="@id/btn_turtle"
+        app:layout_constraintEnd_toEndOf="@id/btn_turtle"/>
+
+    <ImageView
+        android:id="@+id/btn_bird"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/btn_bird"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_cat"/>
+
+    <TextView
+        android:id="@+id/tv_bird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Burung"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/btn_bird"
+        app:layout_constraintStart_toStartOf="@id/btn_bird"
+        app:layout_constraintEnd_toEndOf="@id/btn_bird"/>
+
+    <ImageView
+        android:id="@+id/btn_gecko"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/btn_gecko"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/btn_cat"
+        app:layout_constraintEnd_toEndOf="@id/btn_turtle"
+       app:layout_constraintTop_toBottomOf="@id/tv_dog"/>
+
+    <TextView
+        android:id="@+id/tv_gecko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Gecko"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/btn_gecko"
+        app:layout_constraintStart_toStartOf="@id/btn_gecko"
+        app:layout_constraintEnd_toEndOf="@id/btn_gecko"/>
+
+    <ImageView
+        android:id="@+id/btn_sugar_glider"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/btn_turtle"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_turtle"/>
+
+    <TextView
+        android:id="@+id/tv_sugar_glider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sugar Glider"
+        android:fontFamily="@font/plus_jakarta_sans_medium"
+        android:textSize="12sp"
+        android:textColor="@color/headerColor"
+        app:layout_constraintTop_toBottomOf="@id/btn_sugar_glider"
+        app:layout_constraintStart_toStartOf="@id/btn_sugar_glider"
+        app:layout_constraintEnd_toEndOf="@id/btn_sugar_glider"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

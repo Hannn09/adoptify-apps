@@ -1,5 +1,6 @@
 package com.example.adoptify.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.adoptify.R
 import com.example.adoptify.databinding.FragmentHomeBinding
 import com.example.adoptify.model.dummyBanner
+import com.example.adoptify.ui.pet.list.ListPetActivity
 
 
 class HomeFragment : Fragment() {
@@ -41,6 +43,12 @@ class HomeFragment : Fragment() {
         }
 
         dotsPagerAdapter.attachTo(viewPager)
+
+        val btnCat = homeFragment.btnCategories.btnCat
+
+        btnCat.setOnClickListener {
+            startActivity(Intent(requireActivity(), ListPetActivity::class.java))
+        }
     }
 
 

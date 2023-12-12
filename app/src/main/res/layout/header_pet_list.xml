@@ -6,8 +6,9 @@
     android:layout_height="wrap_content"
     android:background="@drawable/background_header"
     android:elevation="4dp"
+    android:paddingBottom="30dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
+
     <ImageView
         android:id="@+id/ic_arrow_back"
         android:layout_width="18dp"
@@ -18,39 +19,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/notification"
         app:layout_constraintTop_toTopOf="@+id/notification"/>
-    
+
     <TextView
         android:id="@+id/notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/plus_jakarta_sans_extra"
-        android:text="@string/my_pet"
+        android:text="Pet List"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
         android:textSize="28sp"
         android:textColor="@color/headerColor"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/ic_arrow_back"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchEditTextLayout"
-        android:layout_width="0dp"
+        android:layout_width="312dp"
         android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginVertical="35dp"
         android:background="@drawable/background_text_field"
         android:backgroundTint="@color/white"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        app:startIconDrawable="@drawable/ic_search"
-        app:endIconDrawable="@drawable/ic_filter"
+        app:endIconDrawable="@drawable/ic_search_orange"
+        app:endIconTint="@color/primaryColor"
         app:endIconMode="custom"
         app:hintEnabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notification">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -63,29 +60,23 @@
             android:fontFamily="@font/plus_jakarta_sans_regular"
             android:textSize="14sp"
             android:hint="@string/pencarian"
-            android:inputType="textEmailAddress"
+            android:textColor="@color/searchHintColor"
+            android:inputType="text"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/ic_notification"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/ic_notification"
-        app:layout_constraintEnd_toStartOf="@+id/ic_bars"
-        app:layout_constraintTop_toTopOf="@+id/notification"
-        app:layout_constraintBottom_toBottomOf="@+id/notification"/>
-
-    <ImageView
-        android:id="@+id/ic_bars"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/ic_bars"
+    <ImageButton
+        android:id="@+id/btnFilter"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_filter_white"
+        android:background="@drawable/background_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/notification"
-        app:layout_constraintBottom_toBottomOf="@+id/notification"/>
+        app:layout_constraintBottom_toBottomOf="@id/searchEditTextLayout"
+        app:layout_constraintTop_toTopOf="@id/searchEditTextLayout"  />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

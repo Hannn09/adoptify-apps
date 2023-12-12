@@ -17,6 +17,7 @@
     <color name="titleColor">#FF303030</color>
     <color name="descriptionColor">#B3303030</color>
     <color name="tabNotSelectedColor">#80303030</color>
+    <color name="searchHintColor">#33303030</color>
     <color name="timeColor">#4D303030</color>
     <color name="backgroundCardNotification">#80FFE0B2</color>
     <color name="backgroundSlide">#FFF3F3F3</color>
