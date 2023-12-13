@@ -43,7 +43,7 @@
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:src="@drawable/ic_age_pet"
         app:layout_constraintStart_toEndOf="@id/gender"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -76,7 +76,7 @@
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="20dp"
         android:src="@drawable/ic_ras_pet"
         app:layout_constraintStart_toEndOf="@id/agePet"
         app:layout_constraintTop_toTopOf="parent"/>
