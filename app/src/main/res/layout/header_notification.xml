@@ -14,9 +14,9 @@
         android:fontFamily="@font/plus_jakarta_sans_extra"
         android:text="@string/notifikasi"
         android:layout_marginTop="68dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="30dp"
         android:layout_marginBottom="32dp"
-        android:textSize="28sp"
+        android:textSize="22sp"
         android:textColor="@color/headerColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,8 +24,8 @@
 
     <ImageView
         android:id="@+id/ic_notification"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
         android:layout_marginEnd="30dp"
         android:src="@drawable/ic_notification"
         app:layout_constraintEnd_toStartOf="@+id/ic_bars"

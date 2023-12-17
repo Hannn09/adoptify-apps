@@ -10,10 +10,10 @@
     
     <ImageView
         android:id="@+id/ic_arrow_back"
-        android:layout_width="18dp"
-        android:layout_height="18dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
         android:src="@drawable/ic_back_black"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/notification"
@@ -27,7 +27,7 @@
         android:text="@string/my_pet"
         android:layout_marginStart="25dp"
         android:layout_marginBottom="32dp"
-        android:textSize="28sp"
+        android:textSize="22sp"
         android:textColor="@color/headerColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/ic_arrow_back"
@@ -70,9 +70,9 @@
 
     <ImageView
         android:id="@+id/ic_notification"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="25dp"
         android:src="@drawable/ic_notification"
         app:layout_constraintEnd_toStartOf="@+id/ic_bars"
         app:layout_constraintTop_toTopOf="@+id/notification"
@@ -80,9 +80,9 @@
 
     <ImageView
         android:id="@+id/ic_bars"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="30dp"
         android:src="@drawable/ic_bars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/notification"
