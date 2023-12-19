@@ -11,6 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:visibility="visible"/>
+
         <ImageView
             android:id="@+id/ic_arrow"
             android:layout_width="20dp"
@@ -40,21 +54,20 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="35dp"
             android:layout_marginVertical="25dp"
-            android:background="@drawable/background_text_login"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:hintEnabled="false"
+            app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLogin">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.example.adoptify.ui.custom.CustomEditText
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:padding="12dp"
-                android:background="@drawable/background_text_login"
                 android:fontFamily="@font/plus_jakarta_sans_regular"
                 android:textSize="14sp"
                 android:drawableStart="@drawable/ic_email"
@@ -71,7 +84,6 @@
             android:layout_height="50dp"
             android:layout_marginHorizontal="35dp"
             android:layout_marginVertical="25dp"
-            android:background="@drawable/background_text_login"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:endIconMode="password_toggle"
@@ -81,14 +93,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.example.adoptify.ui.custom.CustomEditText
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="10"
                 android:padding="12dp"
                 android:fontFamily="@font/plus_jakarta_sans_regular"
-                android:background="@drawable/background_text_login"
                 android:textSize="14sp"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="20dp"
@@ -120,6 +131,7 @@
             android:layout_marginVertical="15dp"
             android:background="@drawable/background_welcome_button"
             android:textAllCaps="false"
+            android:letterSpacing="0"
             android:text="@string/login"
             android:elevation="0dp"
             android:fontFamily="@font/plus_jakarta_sans_bold"

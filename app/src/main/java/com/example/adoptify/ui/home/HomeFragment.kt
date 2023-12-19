@@ -2,15 +2,24 @@ package com.example.adoptify.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.RecyclerView
 import com.example.adoptify.R
 import com.example.adoptify.databinding.FragmentHomeBinding
 import com.example.adoptify.model.dummyBanner
+import com.example.adoptify.ui.login.LoginActivity
+import com.example.adoptify.ui.login.LoginViewModel
 import com.example.adoptify.ui.pet.list.ListPetActivity
+import com.example.adoptify.ui.welcome.WelcomeActivity
+import com.example.adoptify.utils.ViewModelFactory
 
 
 class HomeFragment : Fragment() {
@@ -18,6 +27,12 @@ class HomeFragment : Fragment() {
     private var _homeFragment: FragmentHomeBinding? = null
 
     private val homeFragment get() = _homeFragment!!
+
+    private val loginViewModel by activityViewModels<LoginViewModel> { ViewModelFactory.getInstance(requireActivity()) }
+
+    private var token = ""
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +50,8 @@ class HomeFragment : Fragment() {
         val viewPager = homeFragment.itemCaraousel
         val dotsPagerAdapter = homeFragment.dotsIndicator
 
+
+
         viewPager.apply {
             clipChildren = false
             clipToPadding = false
@@ -49,6 +66,21 @@ class HomeFragment : Fragment() {
         btnCat.setOnClickListener {
             startActivity(Intent(requireActivity(), ListPetActivity::class.java))
         }
+
+        loginViewModel.getSession().observe(viewLifecycleOwner) {
+            token = it.token
+            if (!it.isLogin) {
+                startActivity(Intent(requireActivity(), WelcomeActivity::class.java))
+                activity?.finish()
+            }
+        }
+
+        homeFragment.btnFilter.setOnClickListener {
+            loginViewModel.logout()
+            startActivity(Intent(requireActivity(), LoginActivity::class.java))
+        }
+
+
     }
 
 
@@ -57,5 +89,9 @@ class HomeFragment : Fragment() {
         _homeFragment = null
     }
 
+    companion object {
+        private const val USERNAME = "username"
+        private const val TAG = "HomeFragment"
+    }
 
 }

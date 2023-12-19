@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pet.detail.DetailListPetActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_pet"
+            android:layout_width="match_parent"
+            android:layout_height="315dp"
+            android:src="@drawable/detail_pet"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:shapeAppearanceOverlay="@style/DetailPetImageView"/>
+
+        <ImageView
+            android:id="@+id/ic_arrow"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_back_black"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_pet"/>
+        
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/maps_pet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ic_arrow"
+            app:layout_constraintTop_toTopOf="@id/ic_arrow"/>
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_pet"/>
+
+        <ImageView
+            android:id="@+id/btn_wa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_wa"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toTopOf="@id/profile"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/btn_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_message"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintTop_toTopOf="@id/profile"
+            app:layout_constraintEnd_toStartOf="@id/btn_wa"/>
+
+        <TextView
+            android:id="@+id/name_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="35dp"
+            android:text="Anjing Beagle Australia"
+            android:fontFamily="@font/plus_jakarta_sans_extra"
+            android:textColor="@color/headerColor"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile"/>
+        
+        <ImageView
+            android:id="@+id/ic_location"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_location_fill"
+            app:layout_constraintStart_toStartOf="@id/name_pet"
+            app:layout_constraintTop_toBottomOf="@id/name_pet"/>
+        
+        <TextView
+            android:id="@+id/name_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kota Malang, Jawa Timur (± 45 meter)"
+            android:fontFamily="@font/plus_jakarta_sans_semibold"
+            android:textColor="@color/headerColor"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/ic_location"
+            app:layout_constraintTop_toTopOf="@id/ic_location"
+            app:layout_constraintBottom_toBottomOf="@id/ic_location"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="28dp"
+            android:background="#4D000000"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_location" />
+
+        <TextView
+            android:id="@+id/detail_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="35dp"
+            android:text="Detail hewan"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:textColor="@color/headerColor"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view"/>
+
+        <include
+            android:id="@+id/information_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/information_detail_pet"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@id/detail_pet"/>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="25dp"
+            android:background="#4D000000"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/information_pet" />
+
+        <TextView
+            android:id="@+id/desc_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="35dp"
+            android:text="Deskripsi"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:textColor="@color/headerColor"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view2"/>
+
+        <TextView
+            android:id="@+id/full_desc_pet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="35dp"
+            android:text="@string/lorem_ipsum"
+            android:fontFamily="@font/plus_jakarta_sans_regular"
+            android:textColor="@color/tabNotSelectedColor"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/desc_pet"/>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#4D000000"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/full_desc_pet" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/footer_detail_pet"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@id/view3"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

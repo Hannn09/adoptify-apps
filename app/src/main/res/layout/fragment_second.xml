@@ -6,8 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_welcome"
     tools:context=".ui.welcome.second.SecondFragment">
+    
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="208dp"
+        android:layout_height="350dp"
+        app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/tvNameApps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/bird_pet"/>
 
     <TextView
         android:id="@+id/tvNameApps"
@@ -15,7 +24,7 @@
         android:textAlignment="center"
         android:fontFamily="@font/montserrat"
         android:textSize="48sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,15 +36,25 @@
         android:id="@+id/btnStart"
         android:layout_width="302dp"
         android:layout_height="50dp"
-        android:text="@string/start"
+        android:text="Lanjutkan"
         android:textAllCaps="false"
+        android:letterSpacing="0"
         android:fontFamily="@font/plus_jakarta_sans_medium"
         android:background="@drawable/background_welcome_button"
         android:textSize="20sp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/footer_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

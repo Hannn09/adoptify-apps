@@ -120,4 +120,8 @@ The last feature that is expected is a donation feature
 to help animals that need funds or are affected
 by illness without ownership.</string>
     <string name="categories">Kategori</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n eiusmod tempor incididunt ut labore et dolore magna aliqua.\n Ut enim ad minim veniam, quis nostrud exercitation ullamco\n laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="adopt_now">Adopsi Sekarang!</string>
+    <string name="error_password">Password not less than 8 characters</string>
+    <string name="error_email">Not a valid pattern for email</string>
 </resources>

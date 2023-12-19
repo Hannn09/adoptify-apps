@@ -97,6 +97,9 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-analytics")
 
+    //data store
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
     //testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

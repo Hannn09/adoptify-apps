@@ -22,8 +22,19 @@
         <item name="color">@color/white</item>
     </style>
     
+    <style name="DetailPetImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+
+    </style>
+    
     <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/AppModelStyle</item>
+    </style>
+    
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_corner_dialog</item>
     </style>
 
 <!--    Bottom Sheet Style  -->

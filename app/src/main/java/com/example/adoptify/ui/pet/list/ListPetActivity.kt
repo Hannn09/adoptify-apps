@@ -1,10 +1,12 @@
 package com.example.adoptify.ui.pet.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.adoptify.R
 import com.example.adoptify.databinding.ActivityListPetBinding
+import com.example.adoptify.ui.pet.detail.DetailListPetActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class ListPetActivity : AppCompatActivity() {
@@ -34,6 +36,16 @@ class ListPetActivity : AppCompatActivity() {
             dialog.setContentView(view)
 
             dialog.show()
+        }
+
+        val card = activityListPetBinding.cardPet.itemImage
+
+        card.setOnClickListener {
+            startActivity(Intent(this, DetailListPetActivity::class.java))
+        }
+
+        activityListPetBinding.header.icArrowBack.setOnClickListener {
+            onBackPressed()
         }
     }
 }

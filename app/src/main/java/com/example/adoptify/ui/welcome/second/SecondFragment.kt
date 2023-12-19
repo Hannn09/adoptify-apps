@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
 import com.example.adoptify.R
 import com.example.adoptify.databinding.FragmentSecondBinding
 import com.example.adoptify.ui.login.LoginActivity
@@ -25,10 +26,10 @@ class SecondFragment : Fragment() {
         val view = secondFragment.root
 
         val btnStart = secondFragment.btnStart
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.welcomeViewPager)
 
         btnStart.setOnClickListener {
-            val intent = Intent(requireContext(),LoginActivity::class.java)
-            requireContext().startActivity(intent)
+            viewPager?.currentItem = 2
         }
 
 
