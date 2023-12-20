@@ -26,6 +26,7 @@
     <color name="hintTextColor">#919290</color>
     <color name="backgroundColor">#FEFFF7</color>
     <color name="green">#32CD32</color>
+    <color name="backgroundColorGrey">#F8F8F8</color>
 
 
 </resources>

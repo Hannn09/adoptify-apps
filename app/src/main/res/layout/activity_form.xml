@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="80dp"
+    android:background="@drawable/background"
+    tools:context=".FormActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ic_arrow"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/personal_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/plus_jakarta_sans_extra"
+            android:text="@string/personal_data"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_arrow"
+            app:layout_constraintStart_toEndOf="@id/ic_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/e_mail"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personal_data" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/background_text_field"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="12dp"
+                android:background="@drawable/background_text_field"
+                android:fontFamily="@font/plus_jakarta_sans_medium"
+                android:textSize="12sp"
+                android:hint="@string/e_mail"
+                android:inputType="textEmailAddress"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/id_PetIdTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp"
+            android:text="@string/pet_id"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PetIdEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/background_text_field"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_PetIdTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PetIdEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="12dp"
+                android:background="@drawable/background_text_field"
+                android:fontFamily="@font/plus_jakarta_sans_medium"
+                android:textSize="12sp"
+                android:hint="@string/pet_id"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp"
+            android:text="@string/address"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PetIdEditTextLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addressEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/background_text_field"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/addressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="12dp"
+                android:background="@drawable/background_text_field"
+                android:fontFamily="@font/plus_jakarta_sans_medium"
+                android:textSize="12sp"
+                android:hint="@string/address"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/provinsiEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="215dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/background_text_field"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditTextLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/provinsiEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="10"
+                android:padding="12dp"
+                android:background="@drawable/background_text_field"
+                android:fontFamily="@font/plus_jakarta_sans_medium"
+                android:textSize="12sp"
+                android:hint="@string/provinsi"
+                android:inputType="textMultiLine"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/PostCodeEditTextLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/background_text_field"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/provinsiEditTextLayout"
+            app:layout_constraintTop_toBottomOf="@+id/addressEditTextLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PostCodeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/background_text_field"
+                android:ems="10"
+                android:fontFamily="@font/plus_jakarta_sans_medium"
+                android:hint="@string/post_code"
+                android:inputType="text|number"
+                android:padding="12dp"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/IdCardTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp"
+            android:text="@string/id_card"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/provinsiEditTextLayout" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="15dp"
+            android:padding="15dp"
+            android:text="      Unggah gambar"
+            android:textAllCaps="false"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="12sp"
+            android:background="@drawable/background_text_field"
+            android:drawableStart="@drawable/ic_add_img"
+            android:gravity="start|center_vertical"
+            android:stateListAnimator="@null"
+            app:layout_constraintTop_toBottomOf="@+id/IdCardTextView" />
+
+        <TextView
+            android:id="@+id/watermarkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="5dp"
+            android:text="@string/water_mark"
+            android:fontFamily="@font/plus_jakarta_sans_regular"
+            android:textColor="@color/hintTextColor"
+            android:textSize="10sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddIdCard" />
+
+        <TextView
+            android:id="@+id/transactionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp"
+            android:text="@string/transaction"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/watermarkTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="15dp"
+            android:padding="15dp"
+            android:text="      Unggah gambar"
+            android:textAllCaps="false"
+            android:fontFamily="@font/plus_jakarta_sans_medium"
+            android:textColor="@color/regularTextColor"
+            android:textSize="12sp"
+            android:background="@drawable/background_text_field"
+            android:drawableStart="@drawable/ic_add_img"
+            android:gravity="start|center_vertical"
+            android:stateListAnimator="@null"
+            app:layout_constraintTop_toBottomOf="@+id/transactionTextView" />
+        
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_remove_data"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginVertical="25dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="215dp"
+            android:text="@string/remove_data"
+            android:textAllCaps="false"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:textColor="@color/regularTextColor"
+            android:textSize="12sp"
+            android:background="@drawable/backgroun_button_remove_data"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddTransaction"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginVertical="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/background_welcome_button"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:text="@string/save_next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_remove_data"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddTransaction" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

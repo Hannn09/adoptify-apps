@@ -13,8 +13,8 @@
 
       <ImageView
           android:id="@+id/ic_arrow"
-          android:layout_width="20dp"
-          android:layout_height="20dp"
+          android:layout_width="16dp"
+          android:layout_height="16dp"
           android:layout_marginStart="25dp"
           android:layout_marginTop="70dp"
           android:src="@drawable/ic_back_black"
@@ -30,7 +30,7 @@
           android:fontFamily="@font/plus_jakarta_sans_extra"
           android:text="@string/profile"
           android:textColor="@color/black"
-          android:textSize="28sp"
+          android:textSize="22sp"
           app:layout_constraintBottom_toBottomOf="@id/ic_arrow"
           app:layout_constraintStart_toEndOf="@id/ic_arrow"
           app:layout_constraintTop_toTopOf="parent" />
