@@ -220,9 +220,6 @@ consectetur adipiscing elit,
 sed do eiusmod tempor.</item>
     </string-array>
 
-
-
-
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n eiusmod tempor incididunt ut labore et dolore magna aliqua.\n Ut enim ad minim veniam, quis nostrud exercitation ullamco\n laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="adopt_now">Adopsi Sekarang!</string>
     <string name="error_password">Password not less than 8 characters</string>
