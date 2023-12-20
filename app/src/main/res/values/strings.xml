@@ -34,7 +34,7 @@
     <string name="place_born">Tanggal Lahir</string>
     <string name="number">Nomor telepon</string>
     <string name="e_mail">E-mail</string>
-    <string name="address">Alamat rumah</string>
+    <string name="address">Alamat Rumah</string>
     <string name="update_profile">Perbarui profil</string>
     <string name="change_profile">Perbarui Foto Profil</string>
     <string name="photo_profile">Foto profil</string>
@@ -119,7 +119,107 @@ shelter/pet shop/vet.\n\n
 The last feature that is expected is a donation feature
 to help animals that need funds or are affected
 by illness without ownership.</string>
+
     <string name="categories">Kategori</string>
+    <string name="update">Diperbarui 12/12/2023</string>
+    <string name="title_tnc">Persyaratan\ndan Ketentuan</string>
+    <string name="tnc_1">1 - Penerimaan Syarat dan Ketentuan</string>
+    <string name="tnc_2">2 - Penggunaan Layanan</string>
+    <string name="tnc_3">3 - Konten Pengguna</string>
+    <string name="tnc_4">4 - Hak Kekayaan Intelektual</string>
+    <string name="tnc_5">5 - Perubahan Syarat dan Ketentuan</string>
+    <string name="tnc_6">6 - Penutup</string>
+    <string name="desc_tnc_1">Dengan mengakses atau menggunakan aplikasi "Adoptify", Anda secara tegas menyetujui untuk terikat oleh semua syarat dan ketentuan yang tercantum dalam dokumen ini. Jika Anda tidak setuju dengan salah satu bagian dari syarat dan ketentuan ini, Anda tidak diperkenankan menggunakan layanan kami.</string>
+    <string name="desc_tnc_2">
+        <li>Penggunaan aplikasi "Adoptify" hanya diperuntukkan bagi mereka yang berusia 18 tahun ke atas. Pengguna yang di bawah usia ini harus mendapatkan izin dari orang tua atau wali sebelum menggunakan layanan kami.</li>\n
+        <li>Setiap informasi yang Anda berikan kepada kami harus akurat dan terkini. Kami tidak bertanggung jawab atas informasi yang tidak akurat atau usang.</li>\n
+        <li>Anda bertanggung jawab sepenuhnya atas keamanan akun Anda. Jangan memberikan informasi akun Anda kepada pihak lain dan pastikan untuk keluar dari sesi Anda setelah menggunakan aplikasi.</li>\n
+    </string>
+    <string name="desc_tnc_3">
+        <li>Anda setuju bahwa konten yang Anda unggah atau bagikan melalui aplikasi "Adoptify" adalah tanggung jawab Anda sendiri. Kami tidak bertanggung jawab atas konten yang diunggah oleh pengguna.</li>\n
+        <li>Kami berhak untuk menghapus atau menonaktifkan konten yang melanggar hukum atau melanggar syarat dan ketentuan yang telah ditetapkan.</li>\n
+    </string>
+    <string name="desc_tnc_4">
+        <li>Aplikasi "Adoptify" dan semua konten yang terkait (kecuali konten yang diunggah oleh pengguna) merupakan milik kami atau pemberi lisensi kami dan dilindungi oleh hukum kekayaan intelektual yang berlaku.</li>\n
+        <li>Pengguna tidak diberikan hak atau lisensi apa pun untuk menggunakan merek dagang, logo, atau konten lain yang terdapat dalam aplikasi "Adoptify" tanpa izin tertulis dari kami.</li>\n
+    </string>
+    <string name="desc_tnc_5">Kami berhak untuk mengubah, menambah, atau menghapus bagian dari syarat dan ketentuan ini sesuai dengan kebijakan kami. Perubahan tersebut akan berlaku segera setelah diterbitkan dalam aplikasi. Dengan tetap menggunakan layanan kami setelah perubahan tersebut, Anda dianggap menerima syarat dan ketentuan yang telah diperbarui.</string>
+    <string name="desc_tnc_6">Syarat dan ketentuan ini mengatur hubungan antara pengguna dan aplikasi "Adoptify". Jika Anda memiliki pertanyaan atau masalah terkait dengan syarat dan ketentuan ini, jangan ragu untuk menghubungi kami melalui informasi yang tersedia di aplikasi. Terima kasih telah menggunakan aplikasi "Adoptify". Dengan menggunakan layanan kami, Anda menunjukkan pemahaman dan persetujuan Anda terhadap syarat dan ketentuan yang telah ditetapkan.</string>
+    <string name="personal_data">Data Diri</string>
+    <string name="pet_id">Pet ID</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="post_code">Kode Pos</string>
+    <string name="id_card">Kartu Identitas</string>
+    <string name="water_mark">*Disertai dengan watermark Adoptify</string>
+    <string name="transaction">Bukti Transaksi</string>
+    <string name="remove_data">Bersihkan data</string>
+    <string name="save_next"><![CDATA[Simpan & lanjutkan]]></string>
+    <string name="saved_data">Data adopsimu\nberhasil disimpan!</string>
+    <string name="done">Selesaikan</string>
+    <string name="unsaved_data">Data adopsimu\ntidak disimpan!</string>
+    <string name="show_detail">Tampilkan detail</string>
+    <string name="close">Tutup</string>
+    <string name="rupiah">Rp</string>
+    <string name="nominal">3.600.000</string>
+    <string name="cat">Kucing</string>
+    <string name="desc_pet_problem">Kucing kecelakaan (patah kaki)</string>
+    <string name="count_down">15 Hari waktu donasi tersisa</string>
+    <string name="donation">Donasi</string>
+    <string name="need_now">Membutuhkan sekarang</string>
+    <string name="other">Lainnya</string>
+    <string name="donation_success">Donasimu Berhasil\nDikirim!</string>
+    <string name="notifikasi_donation">Donasi senilai Rp 210.000\ntelah dipotong dari saldomu</string>
+    <string name="download">Unduh bukti</string>
+    <string name="choose_nominal">Pilih nominal</string>
+    <string name="choose_nominal_1">50</string>
+    <string name="choose_nominal_rupiah">Nominal</string>
+    <string name="ribu">.000</string>
+    <string name="description_nominal">Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor.</string>
+    <string name="konfirmation_donation">Konfirmasi Donasi</string>
+    <string name="name">Nama</string>
+    <string name="send_email">Bukti donasi akan dikirimkan melalui e-mail terdaftar</string>
+    <string name="telp">Nomor Telepon</string>
+    <string name="nominal_donation">Nominal Donasi</string>
+    <string name="fee_admin">Donasi yang diberikan, akan dikenakan commitment\nfee sebesar 5% dari nominal.</string>
+    <string name="choose_nominal_else">Nominal lainnya</string>
+    <string name="input_nilai_donasi">Masukkan nilai donasi</string>
+    <string name="title_donation">Kucing kecelakaan\n(patah kaki)</string>
+    <string name="count_down2">Waktu Tersisa</string>
+    <string name="day">15 Hari</string>
+    <string name="donasi_terkumpul">Donasi terkumpul</string>
+    <string name="donasi_total">5.300.000</string>
+    <string name="tv_donasi_total">Dari total</string>
+    <string name="description">Deskripsi</string>
+    <string name="description_donation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="galeri">Galeri</string>
+    <string-array name="data_nominal">
+        <item>50</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>250</item>
+    </string-array>
+    <string-array name="data_ribu">
+        <item>.000</item>
+    </string-array>
+    <string-array name="data_description">
+    <item>Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor.</item>
+        <item>Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor.</item>
+        <item>Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor.</item>
+        <item>Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor.</item>
+        <item>Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor.</item>
+    </string-array>
+
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\n eiusmod tempor incididunt ut labore et dolore magna aliqua.\n Ut enim ad minim veniam, quis nostrud exercitation ullamco\n laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="adopt_now">Adopsi Sekarang!</string>
     <string name="error_password">Password not less than 8 characters</string>

@@ -5,7 +5,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.asLiveData
 import com.example.adoptify.service.api.ApiService
+import com.example.adoptify.service.response.DataItem
 import com.example.adoptify.service.response.LoginResponse
+import com.example.adoptify.service.response.PetResponse
 import com.example.adoptify.service.response.RegisterResponse
 import com.example.adoptify.utils.SettingsPreferences
 import retrofit2.Call
@@ -27,6 +29,12 @@ class AdoptifyRepository private constructor(
 
     private val _registerResponse = MutableLiveData<RegisterResponse>()
     val registerResponse: LiveData<RegisterResponse> = _registerResponse
+
+    private val _petResponse = MutableLiveData<List<DataItem>>()
+    val petResponse: LiveData<List<DataItem>> = _petResponse
+
+    private val _detailPetResponse = MutableLiveData<List<DataItem>>()
+    val detailPetResponse: LiveData<List<DataItem>> = _detailPetResponse
 
     private val _isSuccess = MutableLiveData<Boolean>()
     val isSuccess: LiveData<Boolean> = _isSuccess
@@ -100,6 +108,62 @@ class AdoptifyRepository private constructor(
 
     suspend fun logout() {
         pref.deleteToken()
+    }
+
+    fun getListPet(type: String) {
+        _isLoading.value = true
+        val client = apiService.getPetByType(type)
+
+        client.enqueue(object : Callback<PetResponse> {
+            override fun onResponse(call: Call<PetResponse>, response: Response<PetResponse>) {
+                try {
+                    _isLoading.value = false
+                    val listPet = response.body()?.data
+                    if (response.isSuccessful && response.body() != null) {
+                        _petResponse.value = listPet!!
+                    } else {
+                        Log.d(TAG, "onResponse: $response")
+                    }
+                } catch (e: Exception) {
+                    Log.d(TAG, "onResponse: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<PetResponse>, t: Throwable) {
+                _isLoading.value = false
+                Log.d(TAG, "onFailure: ${t.message.toString()}")
+            }
+
+        })
+    }
+
+    fun getPetById(uid: Int) {
+        _isLoading.value = true
+
+        val client = apiService.getDetailPet(uid)
+        
+        client.enqueue(object : Callback<PetResponse> {
+            override fun onResponse(call: Call<PetResponse>, response: Response<PetResponse>) {
+                try {
+                    _isLoading.value = false
+                    val detail = response.body()?.data
+                    if (response.isSuccessful && response.body() != null) {
+                        _detailPetResponse.value = detail!!
+                    } else {
+                        Log.d(TAG, "onResponse: $response")
+                    }
+                } catch (e: Exception) {
+                    Log.d(TAG, "onResponse: ${response.message()}")
+                }
+            }
+
+            override fun onFailure(call: Call<PetResponse>, t: Throwable) {
+                _isLoading.value = false
+                Log.d(TAG, "onFailure: ${t.message.toString()}")
+            }
+
+        })
+
     }
 
 

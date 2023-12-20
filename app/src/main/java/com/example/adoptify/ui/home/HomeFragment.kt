@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -61,11 +63,27 @@ class HomeFragment : Fragment() {
 
         dotsPagerAdapter.attachTo(viewPager)
 
-        val btnCat = homeFragment.btnCategories.btnCat
 
-        btnCat.setOnClickListener {
-            startActivity(Intent(requireActivity(), ListPetActivity::class.java))
-        }
+        val btnCat = homeFragment.btnCategories.btnCat
+        val btnDog = homeFragment.btnCategories.btnDog
+        val btnTurtle = homeFragment.btnCategories.btnTurtle
+        val btnBird = homeFragment.btnCategories.btnBird
+        val btnGecko = homeFragment.btnCategories.btnGecko
+        val btnSugarGlider = homeFragment.btnCategories.btnSugarGlider
+
+//        btnCat.setOnClickListener {
+//            val intent = Intent(requireActivity(), ListPetActivity::class.java)
+//            intent.putExtra(CATEGORY, "kucing")
+//            startActivity(intent)
+//        }
+
+        setCategoryButtonClickListener(btnCat, "kucing")
+        setCategoryButtonClickListener(btnDog, "anjing")
+        setCategoryButtonClickListener(btnTurtle, "kura-kura")
+        setCategoryButtonClickListener(btnBird, "burung")
+        setCategoryButtonClickListener(btnGecko, "gecko")
+        setCategoryButtonClickListener(btnSugarGlider, "sugar glider")
+
 
         loginViewModel.getSession().observe(viewLifecycleOwner) {
             token = it.token
@@ -80,7 +98,14 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireActivity(), LoginActivity::class.java))
         }
 
+    }
 
+    fun setCategoryButtonClickListener(button: ImageView, category: String) {
+        button.setOnClickListener {
+            val intent = Intent(requireActivity(), ListPetActivity::class.java)
+            intent.putExtra(CATEGORY, category)
+            startActivity(intent)
+        }
     }
 
 
@@ -91,6 +116,7 @@ class HomeFragment : Fragment() {
 
     companion object {
         private const val USERNAME = "username"
+        const val CATEGORY = "category"
         private const val TAG = "HomeFragment"
     }
 

@@ -10,6 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/primaryColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:visibility="visible"/>
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image_pet"
             android:layout_width="match_parent"
@@ -75,6 +89,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginStart="35dp"
             android:text="Anjing Beagle Australia"
+            android:capitalize="words"
             android:fontFamily="@font/plus_jakarta_sans_extra"
             android:textColor="@color/headerColor"
             android:textSize="22sp"
@@ -98,6 +113,8 @@
             android:fontFamily="@font/plus_jakarta_sans_semibold"
             android:textColor="@color/headerColor"
             android:textSize="12sp"
+            android:maxLength="50"
+            android:capitalize="words"
             android:layout_marginStart="10dp"
             app:layout_constraintStart_toEndOf="@id/ic_location"
             app:layout_constraintTop_toTopOf="@id/ic_location"
@@ -164,10 +181,11 @@
 
         <TextView
             android:id="@+id/full_desc_pet"
-            android:layout_width="wrap_content"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginStart="35dp"
+            android:lineHeight="20dp"
             android:text="@string/lorem_ipsum"
             android:fontFamily="@font/plus_jakarta_sans_regular"
             android:textColor="@color/tabNotSelectedColor"

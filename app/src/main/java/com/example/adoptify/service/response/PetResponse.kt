@@ -26,7 +26,7 @@ data class DataItem(
 	@SerializedName("gambar")
 	val gambar: String,
 
-	@SerializedName("ketKesehatan")
+	@SerializedName("ket_kesehatan")
 	val ketKesehatan: String,
 
 	@SerializedName("users")
@@ -50,7 +50,7 @@ data class DataItem(
 	@SerializedName("deskripsi")
 	val deskripsi: String,
 
-	@SerializedName("jenisKelamin")
+	@SerializedName("jenis_kelamin")
 	val jenisKelamin: String? = null
 )
 

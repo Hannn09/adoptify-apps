@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.adoptify.model.AdoptifyRepository
 import com.example.adoptify.ui.login.LoginViewModel
+import com.example.adoptify.ui.pet.PetViewModel
 import com.example.adoptify.ui.register.RegisterViewModel
 
 class ViewModelFactory(private val adoptRepository: AdoptifyRepository) :
@@ -14,6 +15,8 @@ class ViewModelFactory(private val adoptRepository: AdoptifyRepository) :
             return RegisterViewModel(adoptRepository) as T
         } else if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
             return LoginViewModel(adoptRepository) as T
+        } else if (modelClass.isAssignableFrom(PetViewModel::class.java)) {
+            return PetViewModel(adoptRepository) as T
         }
         throw IllegalArgumentException("Unknown View Model class : ${modelClass.name}")
     }

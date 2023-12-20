@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="25dp"
     app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text="Meng"
+            android:capitalize="words"
             android:textSize="18sp"
             android:fontFamily="@font/plus_jakarta_sans_extra"
             android:textColor="@color/headerColor"
@@ -42,6 +44,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
             android:text="British Shorthair"
+            android:capitalize="words"
             android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/greetingTextColor"
             app:layout_constraintTop_toBottomOf="@id/pet_name"
@@ -53,6 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text="3.5 Bulan"
+            android:capitalize="words"
             android:textSize="12sp"
             android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/regularTextColor"
@@ -75,7 +79,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="Jl. Raden Intan, Polowijen"
+            android:capitalize="words"
             android:textSize="10sp"
+            android:maxLength="45"
             android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/headerColor"
             app:layout_constraintTop_toTopOf="@id/ic_location"
