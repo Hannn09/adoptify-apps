@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    tools:context=".ui.tnc.terms_condition"
+    android:layout_marginBottom="10dp">
+
+    <include
+        android:id="@+id/tnc"
+        layout="@layout/fragment_terms_conditions"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_button_rounded"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/primaryColor"
+        app:layout_constraintEnd_toEndOf="@+id/tnc"
+        app:layout_constraintStart_toStartOf="@+id/tnc"
+        app:layout_constraintTop_toBottomOf="@+id/tnc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
