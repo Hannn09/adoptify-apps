@@ -6,57 +6,10 @@
     android:paddingBottom="25dp"
     android:paddingHorizontal="32dp">
 
-    <TextView
-        android:id="@+id/commitment_fee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/plus_jakarta_sans_semibold"
-        android:text="Commitment Fee"
-        android:textColor="@color/greetingTextColor"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/only"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:fontFamily="@font/plus_jakarta_sans_regular"
-        android:text="Only"
-        android:textColor="@color/primaryColor"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/commitment_fee" />
-
-    <TextView
-        android:id="@+id/tv_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:text="10"
-        android:textColor="@color/primaryColor"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/only"
-        app:layout_constraintTop_toBottomOf="@id/commitment_fee" />
-
-    <TextView
-        android:id="@+id/percent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/plus_jakarta_sans_semibold"
-        android:text="%"
-        android:textColor="@color/primaryColor"
-        android:textSize="8sp"
-        app:layout_constraintStart_toEndOf="@id/tv_price"
-        app:layout_constraintTop_toTopOf="@id/tv_price" />
     
     <Button
         android:id="@+id/btnAdopt"
-        android:layout_width="245dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/adopt_now"
         android:textAllCaps="false"

@@ -21,6 +21,12 @@
         <item name="cornerSize">10dp</item>
         <item name="color">@color/white</item>
     </style>
+
+    <style name="CardRounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+        <item name="color">@color/white</item>
+    </style>
     
     <style name="DetailPetImageView" parent="">
         <item name="cornerFamily">rounded</item>

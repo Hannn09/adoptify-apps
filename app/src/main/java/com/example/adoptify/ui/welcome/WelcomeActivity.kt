@@ -15,8 +15,6 @@ import com.example.adoptify.utils.ViewModelFactory
 class WelcomeActivity : AppCompatActivity() {
 
     private lateinit var welcomeActivityBinding: ActivityWelcomeBinding
-    private var token = ""
-    private val loginViewModel by viewModels<LoginViewModel> { ViewModelFactory.getInstance(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,15 +27,5 @@ class WelcomeActivity : AppCompatActivity() {
         viewPager.adapter = dotsPagerAdapter
         dotsIndicator.attachTo(viewPager)
 
-        loginViewModel.getSession().observe(this) {
-            token = it.token
-            if (!it.isLogin) {
-                startActivity(Intent(this, LoginActivity::class.java))
-                finish()
-            } else {
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            }
-        }
     }
 }
