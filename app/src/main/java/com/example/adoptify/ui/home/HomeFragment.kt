@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.adoptify.databinding.FragmentHomeBinding
 import com.example.adoptify.model.dummyBanner
+import com.example.adoptify.ui.donation.Donation
 import com.example.adoptify.ui.login.LoginActivity
 import com.example.adoptify.ui.login.LoginViewModel
 import com.example.adoptify.ui.pet.PetViewModel
@@ -83,6 +84,8 @@ class HomeFragment : Fragment() {
             }
         }
 
+        val btnDonation = homeFragment.donation.btnDonation
+        setDonationButtonClickListener(btnDonation, "donation")
 
         val btnCat = homeFragment.btnCategories.btnCat
         val btnDog = homeFragment.btnCategories.btnDog
@@ -129,6 +132,14 @@ class HomeFragment : Fragment() {
 
     }
 
+    fun setDonationButtonClickListener(btnDonation: ImageView, donation: String) {
+        btnDonation.setOnClickListener {
+            val intent = Intent(requireActivity(), Donation::class.java)
+            intent.putExtra(DONATION, donation)
+            startActivity(intent)
+        }
+    }
+
     fun setCategoryButtonClickListener(button: ImageView, category: String) {
         button.setOnClickListener {
             val intent = Intent(requireActivity(), ListPetActivity::class.java)
@@ -154,6 +165,7 @@ class HomeFragment : Fragment() {
     companion object {
         private const val USERNAME = "username"
         const val CATEGORY = "category"
+        const val DONATION = "donation"
         private const val TAG = "HomeFragment"
     }
 
