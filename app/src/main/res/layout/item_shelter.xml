@@ -50,6 +50,7 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/plus_jakarta_sans_regular"
             android:text="@string/desc_pet_house"
+            android:maxLines="1"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/imgShelter"
@@ -57,10 +58,10 @@
 
         <ImageView
             android:id="@+id/ic_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/ic_location"
+            android:src="@drawable/ic_category"
             app:layout_constraintStart_toStartOf="@id/desc_pet"
             app:layout_constraintTop_toBottomOf="@id/desc_pet" />
 
@@ -69,13 +70,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="17dp"
             android:fontFamily="@font/plus_jakarta_sans_regular"
-            android:text="@string/dummy_distance"
+            android:text="Perawatan"
             android:textColor="@color/white"
             android:textSize="9sp"
             app:layout_constraintStart_toEndOf="@id/ic_location"
-            app:layout_constraintTop_toBottomOf="@id/desc_pet" />
+            app:layout_constraintTop_toTopOf="@id/ic_location"
+            app:layout_constraintBottom_toBottomOf="@id/ic_location"/>
 
         <ImageView
             android:id="@+id/ic_star"
@@ -92,13 +93,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="17dp"
             android:fontFamily="@font/plus_jakarta_sans_regular"
             android:text="4.9"
             android:textColor="@color/white"
             android:textSize="9sp"
             app:layout_constraintStart_toEndOf="@id/ic_star"
-            app:layout_constraintTop_toBottomOf="@id/desc_pet" />
+            app:layout_constraintTop_toTopOf="@id/ic_star"
+            app:layout_constraintBottom_toBottomOf="@id/ic_star"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -249,6 +250,16 @@
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sub_headline" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/halfBlack"
+            android:layout_marginVertical="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shelter_content"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
