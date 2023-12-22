@@ -29,6 +29,18 @@
             android:name=".ui.tnc.TermsnConditionActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.donation.DonationSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donation.ConfirmationDonation"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donation.nominal.NominalDonation"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donation.DonationDetail"
+            android:exported="false" />
+        <activity
             android:name=".ui.donation.Donation"
             android:exported="false" />
         <activity

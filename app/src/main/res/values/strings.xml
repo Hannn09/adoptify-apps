@@ -178,7 +178,7 @@ by illness without ownership.</string>
     <string name="konfirmation_donation">Konfirmasi Donasi</string>
     <string name="name">Nama</string>
     <string name="send_email">Bukti donasi akan dikirimkan melalui e-mail terdaftar</string>
-    <string name="telp">Nomor Telepon</string>
+    <string name="telp">99631274</string>
     <string name="nominal_donation">Nominal Donasi</string>
     <string name="fee_admin">Donasi yang diberikan, akan dikenakan commitment\nfee sebesar 5% dari nominal.</string>
     <string name="choose_nominal_else">Nominal lainnya</string>
@@ -190,7 +190,7 @@ by illness without ownership.</string>
     <string name="donasi_total">5.300.000</string>
     <string name="tv_donasi_total">Dari total</string>
     <string name="description">Deskripsi</string>
-    <string name="description_donation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="description_donation">Kucing yang tinggal di depan kantor BCA jl.Pahlawan tertabrak motor sehingga sulit berjalan seperti merasa kesakitan dan sulit beraktivitas. Untuk mengobatinya dibutuhkan donasi senilai Rp5.300.000 untuk kesembuhannya.\nBerapapun donasi Anda akan sangat membantu kucing ini.</string>
     <string name="galeri">Galeri</string>
     <string-array name="data_nominal">
         <item>50</item>

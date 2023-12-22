@@ -1,15 +1,25 @@
 package com.example.adoptify.ui.donation
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.adoptify.R
+import com.example.adoptify.databinding.FragmentDonationDetailBinding
+import com.example.adoptify.databinding.FragmentDonationNominalBinding
 import com.example.adoptify.model.ImageItem
+import com.example.adoptify.ui.donation.nominal.NominalDonation
 import java.util.UUID
 
-class DonationDetail : AppCompatActivity() {
+class DonationDetail : AppCompatActivity(), View.OnClickListener {
+
+    private var _donationNominalFragment: FragmentDonationNominalBinding? = null
+    private val donationNominalFragment get() = _donationNominalFragment!!
+
     private lateinit var viewPager2: ViewPager2
         private lateinit var pageChangeListener: ViewPager2.OnPageChangeCallback
 
@@ -23,6 +33,9 @@ class DonationDetail : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donation_detail)
+
+        val btnDonationNominal: Button = findViewById(R.id.btnNominal)
+        btnDonationNominal.setOnClickListener(this)
 
         val viewpager2 = findViewById<ViewPager2>(R.id.viewpager2)
 
@@ -69,6 +82,15 @@ class DonationDetail : AppCompatActivity() {
             }
         }
         viewpager2.registerOnPageChangeCallback(pageChangeListener)
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btnNominal -> {
+                val moveIntent = Intent(this@DonationDetail, NominalDonation::class.java)
+                startActivity(moveIntent)
+            }
+        }
     }
 
     override fun onDestroy() {

@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="315dp"
             android:src="@drawable/detail_pet"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
             android:layout_marginStart="25dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/image_pet"/>
-        
+
         <ImageView
             android:layout_width="42dp"
             android:layout_height="42dp"
@@ -100,25 +100,25 @@
             android:id="@+id/ic_location"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/ic_location_fill"
             app:layout_constraintStart_toStartOf="@id/name_pet"
             app:layout_constraintTop_toBottomOf="@id/name_pet"/>
-        
+
         <TextView
             android:id="@+id/name_location"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="Kota Malang, Jawa Timur (± 45 meter)"
+            android:layout_marginStart="10dp"
+            android:capitalize="words"
             android:fontFamily="@font/plus_jakarta_sans_semibold"
+            android:maxLength="150"
+            android:text="Kota Malang, Jawa Timur (± 45 meter)"
             android:textColor="@color/headerColor"
             android:textSize="12sp"
-            android:maxLength="50"
-            android:capitalize="words"
-            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/ic_location"
             app:layout_constraintStart_toEndOf="@id/ic_location"
-            app:layout_constraintTop_toTopOf="@id/ic_location"
-            app:layout_constraintBottom_toBottomOf="@id/ic_location"/>
+            app:layout_constraintTop_toTopOf="@id/ic_location" />
 
         <View
             android:id="@+id/view"
@@ -181,7 +181,7 @@
 
         <TextView
             android:id="@+id/full_desc_pet"
-            android:layout_width="345dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginStart="35dp"

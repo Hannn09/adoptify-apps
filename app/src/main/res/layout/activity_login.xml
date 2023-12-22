@@ -8,22 +8,22 @@
     tools:context=".ui.login.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ProgressBar
             android:id="@+id/progressBar"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminate="true"
-            android:indeterminateTintMode="src_atop"
             android:indeterminateTint="@color/primaryColor"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            tools:visibility="visible"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ic_arrow"
@@ -40,13 +40,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="90dp"
-            android:text="@string/login"
             android:fontFamily="@font/plus_jakarta_sans_medium"
-            android:textSize="32sp"
+            android:text="@string/login"
             android:textColor="@color/headerColor"
-            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEditTextLayout"
@@ -56,8 +56,8 @@
             android:layout_marginVertical="25dp"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
-            app:hintEnabled="false"
             app:errorEnabled="true"
+            app:hintEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLogin">
@@ -66,14 +66,14 @@
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:ems="10"
-                android:padding="12dp"
-                android:fontFamily="@font/plus_jakarta_sans_regular"
-                android:textSize="14sp"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="20dp"
+                android:ems="10"
+                android:fontFamily="@font/plus_jakarta_sans_regular"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="14sp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,9 +87,9 @@
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
             app:endIconMode="password_toggle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:hintEnabled="false"
             app:errorEnabled="true"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailEditTextLayout">
 
@@ -97,14 +97,14 @@
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:ems="10"
-                android:padding="12dp"
-                android:fontFamily="@font/plus_jakarta_sans_regular"
-                android:textSize="14sp"
                 android:drawableStart="@drawable/ic_password"
                 android:drawablePadding="20dp"
+                android:ems="10"
+                android:fontFamily="@font/plus_jakarta_sans_regular"
                 android:hint="Password"
                 android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="14sp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -116,9 +116,9 @@
             android:layout_marginHorizontal="35dp"
             android:layout_marginVertical="15dp"
             android:fontFamily="@font/plus_jakarta_sans_regular"
-            android:textColor="@color/headerColor"
             android:onClick="onCheckboxClicked"
             android:text="@string/checkbox_account"
+            android:textColor="@color/headerColor"
             app:layout_constraintEnd_toEndOf="@+id/passwordEditTextLayout"
             app:layout_constraintStart_toStartOf="@+id/passwordEditTextLayout"
             app:layout_constraintTop_toBottomOf="@+id/passwordEditTextLayout" />
@@ -126,17 +126,16 @@
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:layout_marginHorizontal="35dp"
             android:layout_marginVertical="15dp"
             android:background="@drawable/background_welcome_button"
-            android:textAllCaps="false"
-            android:letterSpacing="0"
-            android:text="@string/login"
             android:elevation="0dp"
             android:fontFamily="@font/plus_jakarta_sans_bold"
-            app:layout_constraintTop_toBottomOf="@+id/checkbox_account"
-            tools:layout_editor_absoluteX="35dp" />
+            android:letterSpacing="0"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_account" />
 
         <TextView
             android:id="@+id/forget_password"
@@ -153,6 +152,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
         <View
+            android:id="@+id/view9"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginStart="16dp"
@@ -176,6 +176,7 @@
             app:layout_constraintTop_toBottomOf="@+id/forget_password" />
 
         <View
+            android:id="@+id/view10"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginEnd="16dp"
@@ -189,8 +190,7 @@
             android:id="@+id/apk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginHorizontal="60dp"
+            android:layout_marginHorizontal="50dp"
             android:layout_marginVertical="15dp"
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/login_with">
@@ -199,36 +199,36 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="14dp"
-                android:paddingVertical="12dp"
-                android:paddingHorizontal="6dp"
                 android:background="@drawable/background_social_media"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="12dp"
                 android:src="@drawable/ic_meta" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="14dp"
-                android:paddingVertical="12dp"
-                android:paddingHorizontal="6dp"
                 android:background="@drawable/background_social_media"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="12dp"
                 android:src="@drawable/ic_google" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="14dp"
-                android:paddingVertical="12dp"
-                android:paddingHorizontal="6dp"
                 android:background="@drawable/background_social_media"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="12dp"
                 android:src="@drawable/ic_instagram" />
 
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="13dp"
-                android:paddingVertical="12dp"
-                android:paddingHorizontal="6dp"
                 android:background="@drawable/background_social_media"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="12dp"
                 android:src="@drawable/ic_whatsapp" />
 
         </LinearLayout>
@@ -237,12 +237,10 @@
             android:id="@+id/register_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_marginHorizontal="75dp"
             android:layout_marginVertical="5dp"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/apk"
-            tools:layout_editor_absoluteX="35dp">
+            app:layout_constraintTop_toBottomOf="@+id/apk">
 
             <TextView
                 android:id="@+id/no_account"

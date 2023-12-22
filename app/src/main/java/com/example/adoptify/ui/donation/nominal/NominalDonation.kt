@@ -1,45 +1,33 @@
 package com.example.adoptify.ui.donation.nominal
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.adoptify.R
-import com.example.adoptify.model.Nominal
+import com.example.adoptify.databinding.FragmentKonfirmationDonationBinding
+import com.example.adoptify.ui.donation.ConfirmationDonation
 
-class NominalDonation: AppCompatActivity() {
-    private lateinit var rvNominal: RecyclerView
-    private val list = ArrayList<Nominal>()
+class NominalDonation: AppCompatActivity(), View.OnClickListener {
 
+    private var _donationKonfirmationFragment: FragmentKonfirmationDonationBinding? = null
+    private val donationKonfirmationFragment get() = _donationKonfirmationFragment!!
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.item_nominal)
+        setContentView(R.layout.fragment_donation_nominal)
 
-        rvNominal = findViewById(R.id.rv_Nominal)
-        rvNominal.setHasFixedSize(true)
-
-        list.addAll(getListNominal())
-        showRecyclerList()
+        val btnDonationNominal: Button = findViewById(R.id.btnFixDonasi)
+        btnDonationNominal.setOnClickListener(this)
     }
-
-    private fun showRecyclerList() {
-        rvNominal.layoutManager = LinearLayoutManager(this)
-        val listNominalAdapter = ListNominalAdapter(list)
-        rvNominal.adapter = listNominalAdapter
-    }
-
-    private fun getListNominal(): ArrayList<Nominal> {
-        val dataNominal = resources.getStringArray(R.array.data_nominal)
-        val dataRibu = resources.getStringArray(R.array.data_ribu)
-        val dataDescription = resources.getStringArray(R.array.data_description)
-        val listNominal = ArrayList<Nominal>()
-        for (i in dataNominal.indices) {
-            val Nominal = Nominal(dataNominal[i], dataDescription[i], dataRibu[i])
-            listNominal.add(Nominal)
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btnFixDonasi -> {
+                val moveIntent = Intent(this@NominalDonation, ConfirmationDonation::class.java)
+                startActivity(moveIntent)
+            }
         }
-        return listNominal
     }
+
 }
