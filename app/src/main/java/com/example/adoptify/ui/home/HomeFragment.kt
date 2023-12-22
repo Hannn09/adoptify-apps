@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.adoptify.R
 import com.example.adoptify.databinding.FragmentHomeBinding
 import com.example.adoptify.model.dummyBanner
+import com.example.adoptify.ui.donation.Donation
 import com.example.adoptify.ui.login.LoginActivity
 import com.example.adoptify.ui.login.LoginViewModel
 import com.example.adoptify.ui.pet.list.ListPetActivity
@@ -52,8 +53,6 @@ class HomeFragment : Fragment() {
         val viewPager = homeFragment.itemCaraousel
         val dotsPagerAdapter = homeFragment.dotsIndicator
 
-
-
         viewPager.apply {
             clipChildren = false
             clipToPadding = false
@@ -63,6 +62,8 @@ class HomeFragment : Fragment() {
 
         dotsPagerAdapter.attachTo(viewPager)
 
+        val btnDonation = homeFragment.donation.btnDonation
+        setDonationButtonClickListener(btnDonation, "donation")
 
         val btnCat = homeFragment.btnCategories.btnCat
         val btnDog = homeFragment.btnCategories.btnDog
@@ -93,12 +94,16 @@ class HomeFragment : Fragment() {
             }
         }
 
-        homeFragment.btnFilter.setOnClickListener {
-            loginViewModel.logout()
-            startActivity(Intent(requireActivity(), LoginActivity::class.java))
-        }
-
     }
+
+    fun setDonationButtonClickListener(btnDonation: ImageView, donation: String) {
+        btnDonation.setOnClickListener {
+            val intent = Intent(requireActivity(), Donation::class.java)
+            intent.putExtra(DONATION, donation)
+            startActivity(intent)
+        }
+    }
+
 
     fun setCategoryButtonClickListener(button: ImageView, category: String) {
         button.setOnClickListener {
@@ -117,6 +122,7 @@ class HomeFragment : Fragment() {
     companion object {
         private const val USERNAME = "username"
         const val CATEGORY = "category"
+        const val DONATION = "donation"
         private const val TAG = "HomeFragment"
     }
 
