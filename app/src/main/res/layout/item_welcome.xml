@@ -24,7 +24,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="0dp"
         android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:text="@string/dummy_user"
+        android:text="Hooman!"
         android:textColor="@color/headerColor"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_height="70dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="65dp"
-        android:src="@drawable/profile_user"
+        android:src="@drawable/user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
