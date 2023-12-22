@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="180dp"
-    android:orientation="vertical"
     android:background="@drawable/background"
+    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/plus_jakarta_sans_bold"
             android:text="Hooman!"
             android:textColor="@color/headerColor"
@@ -42,7 +42,7 @@
             android:id="@+id/diamond"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/ic_location_fill"
             app:layout_constraintStart_toStartOf="@+id/username"
             app:layout_constraintTop_toBottomOf="@+id/username" />
@@ -51,23 +51,35 @@
             android:id="@+id/profIleUser"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/user"
             android:layout_marginEnd="30dp"
-            app:layout_constraintTop_toTopOf="@id/username"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:src="@drawable/user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/username" />
 
         <TextView
             android:id="@+id/membership"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="7dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/plus_jakarta_sans_regular"
             android:text="Kota Malang, Jawa Timur"
             android:textColor="@color/regularTextColor"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/diamond"
             app:layout_constraintTop_toBottomOf="@id/username" />
+
+
+        <include
+            android:id="@+id/donation"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            layout="@layout/item_btn_donation"
+            app:layout_constraintTop_toBottomOf="@id/membership"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tvShelter"
@@ -81,7 +93,7 @@
             android:textColor="@color/titleColor"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/membership" />
+            app:layout_constraintTop_toBottomOf="@+id/donation" />
 
         <ImageView
             android:id="@+id/icAll"
@@ -106,28 +118,15 @@
             app:layout_constraintEnd_toStartOf="@id/icAll"
             app:layout_constraintTop_toTopOf="@id/tvShelter" />
 
-
-        <include
-            android:id="@+id/donation"
-            android:layout_width="match_parent"
-            android:layout_height="75dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            layout="@layout/item_btn_donation"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/diamond"/>
-
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/itemCaraousel"
             android:layout_width="match_parent"
             android:layout_height="127dp"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/donation"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShelter" />
 
         <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
             android:id="@+id/dots_indicator"
@@ -139,12 +138,11 @@
             app:dotsSize="9dp"
             app:dotsSpacing="5dp"
             app:dotsWidthFactor="2.0"
-            app:selectedDotColor="@color/primaryColor"
-            app:progressMode="true"
-            app:layout_constraintTop_toBottomOf="@+id/itemCaraousel"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemCaraousel"
+            app:progressMode="true"
+            app:selectedDotColor="@color/primaryColor" />
 
         <TextView
             android:id="@+id/tvFeature"
@@ -153,26 +151,25 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginVertical="35dp"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/categories"
             android:fontFamily="@font/plus_jakarta_sans_semibold"
-            android:textSize="18sp"
+            android:text="@string/categories"
             android:textColor="@color/titleColor"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dots_indicator"/>
+            app:layout_constraintTop_toBottomOf="@+id/dots_indicator" />
 
         <include
             android:id="@+id/btnCategories"
+            layout="@layout/item_button_categories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            layout="@layout/item_button_categories"
             android:layout_marginHorizontal="45dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvFeature"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvFeature" />
 
 
         <TextView
@@ -182,20 +179,20 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginVertical="35dp"
             android:layout_marginStart="30dp"
-            android:text="@string/adoption"
             android:fontFamily="@font/plus_jakarta_sans_semibold"
-            android:textSize="18sp"
+            android:text="@string/adoption"
             android:textColor="@color/titleColor"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCategories"/>
+            app:layout_constraintTop_toBottomOf="@+id/btnCategories" />
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView2"
             android:layout_width="match_parent"
             android:layout_height="380dp"
             android:layout_marginVertical="25dp"
-            android:scrollIndicators="none"
             android:background="@color/backgroundHorizontalView"
+            android:scrollIndicators="none"
             app:layout_constraintTop_toBottomOf="@+id/adoption">
 
             <LinearLayout
@@ -213,234 +210,37 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="80dp"
                         android:layout_marginStart="30dp"
-                        android:fontFamily="@font/plus_jakarta_sans_bold"
-                        android:text="Pilih\nhewan\nyang ingin\nkamu\nadopsi!"
+                        android:fontFamily="@font/plus_jakarta_sans_extra"
+                        android:text="Ingin adopsi\nhewan\nterlentar\ndisekitarmu?"
                         android:textColor="@color/headerColor"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
+                        android:id="@+id/btnAll"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
                         android:layout_marginVertical="230dp"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="30dp"
-                        android:background="@drawable/background_button_rounded"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
+                        android:background="@drawable/background_button"
+                        android:fontFamily="@font/plus_jakarta_sans_medium"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="10dp"
                         android:text="Lihat semua"
                         android:textAllCaps="false"
+                        android:textColor="@color/white"
                         android:textSize="12sp" />
 
                 </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="155dp"
-                    android:layout_height="330dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_marginTop="20dp"
-                    app:cardCornerRadius="10dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_abandoned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="25dp"
+                    android:layout_marginStart="30dp"
+                    android:orientation="horizontal" />
 
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/dog"
-                        android:layout_width="145dp"
-                        android:layout_height="170dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/breed_dog"
-                        app:shapeAppearanceOverlay="@style/RoundImageView" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginStart="120dp"
-                        android:layout_marginTop="145dp"
-                        android:src="@drawable/ic_share" />
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="187dp"
-                        android:src="@drawable/ic_eye" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginTop="185dp"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
-                        android:text="@string/see1"
-                        android:textColor="@color/hintTextColor"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toEndOf="@+id/diamond"
-                        app:layout_constraintTop_toBottomOf="@id/username" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="215dp"
-                        android:fontFamily="@font/plus_jakarta_sans_bold"
-                        android:text="Anjing"
-                        android:textColor="@color/headerColor"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toEndOf="@+id/diamond"
-                        app:layout_constraintTop_toBottomOf="@id/username" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="245dp"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
-                        android:text="@string/desc_dog"
-                        android:textColor="@color/regularTextColor"
-                        android:textSize="12sp" />
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="155dp"
-                    android:layout_height="330dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    app:cardCornerRadius="10dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/cat"
-                        android:layout_width="145dp"
-                        android:layout_height="170dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/breed_cat"
-                        app:shapeAppearanceOverlay="@style/RoundImageView" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginStart="120dp"
-                        android:layout_marginTop="145dp"
-                        android:src="@drawable/ic_share" />
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="187dp"
-                        android:src="@drawable/ic_eye" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginTop="185dp"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
-                        android:text="@string/see1"
-                        android:textColor="@color/hintTextColor"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toEndOf="@+id/diamond"
-                        app:layout_constraintTop_toBottomOf="@id/username" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="215dp"
-                        android:fontFamily="@font/plus_jakarta_sans_bold"
-                        android:text="Kucing"
-                        android:textColor="@color/headerColor"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toEndOf="@+id/diamond"
-                        app:layout_constraintTop_toBottomOf="@id/username" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="245dp"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
-                        android:text="@string/desc_dog"
-                        android:textColor="@color/regularTextColor"
-                        android:textSize="12sp" />
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="155dp"
-                    android:layout_height="330dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    app:cardCornerRadius="10dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/bird"
-                        android:layout_width="145dp"
-                        android:layout_height="170dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/breed_bird"
-                        app:shapeAppearanceOverlay="@style/RoundImageView" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginStart="120dp"
-                        android:layout_marginTop="145dp"
-                        android:src="@drawable/ic_share" />
-
-                    <ImageView
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="187dp"
-                        android:src="@drawable/ic_eye" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="40dp"
-                        android:layout_marginTop="185dp"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
-                        android:text="@string/see1"
-                        android:textColor="@color/hintTextColor"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toEndOf="@+id/diamond"
-                        app:layout_constraintTop_toBottomOf="@id/username" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="215dp"
-                        android:fontFamily="@font/plus_jakarta_sans_bold"
-                        android:text="Burung"
-                        android:textColor="@color/headerColor"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toEndOf="@+id/diamond"
-                        app:layout_constraintTop_toBottomOf="@id/username" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="17dp"
-                        android:layout_marginTop="245dp"
-                        android:fontFamily="@font/plus_jakarta_sans_regular"
-                        android:text="@string/desc_dog"
-                        android:textColor="@color/regularTextColor"
-                        android:textSize="12sp" />
-                </androidx.cardview.widget.CardView>
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -451,55 +251,55 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginVertical="35dp"
             android:layout_marginStart="30dp"
-            android:text="@string/news"
             android:fontFamily="@font/plus_jakarta_sans_semibold"
-            android:textSize="18sp"
+            android:text="@string/news"
             android:textColor="@color/titleColor"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"/>
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
 
         <include
             android:id="@+id/newsItem1"
             layout="@layout/item_news"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/news"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/news" />
 
         <View
             android:id="@+id/view1"
             android:layout_width="match_parent"
-            android:visibility="visible"
             android:layout_height="1dp"
             android:background="#F2F2F2"
-            app:layout_constraintTop_toBottomOf="@id/newsItem1"/>
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/newsItem1" />
 
         <include
             android:id="@+id/newsItem2"
             layout="@layout/item_news"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view1"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/view1" />
 
         <View
             android:id="@+id/view2"
             android:layout_width="match_parent"
-            android:visibility="visible"
             android:layout_height="1dp"
             android:background="#F2F2F2"
-            app:layout_constraintTop_toBottomOf="@id/newsItem2"/>
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/newsItem2" />
 
         <include
             android:id="@+id/newsItem3"
             layout="@layout/item_news"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/view2"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/view2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -20,6 +20,7 @@ import com.example.adoptify.model.dummyBanner
 import com.example.adoptify.ui.donation.Donation
 import com.example.adoptify.ui.login.LoginActivity
 import com.example.adoptify.ui.login.LoginViewModel
+import com.example.adoptify.ui.pet.PetViewModel
 import com.example.adoptify.ui.pet.list.ListPetActivity
 import com.example.adoptify.ui.welcome.WelcomeActivity
 import com.example.adoptify.utils.ViewModelFactory
@@ -31,7 +32,24 @@ class HomeFragment : Fragment() {
 
     private val homeFragment get() = _homeFragment!!
 
-    private val loginViewModel by activityViewModels<LoginViewModel> { ViewModelFactory.getInstance(requireActivity()) }
+    private val loginViewModel by activityViewModels<LoginViewModel> {
+        ViewModelFactory.getInstance(
+            requireActivity()
+        )
+    }
+
+    private val petViewModel by activityViewModels<PetViewModel> {
+        ViewModelFactory.getInstance(
+            requireActivity()
+        )
+    }
+
+    private val shelterViewModel by activityViewModels<ShelterViewModel> {
+        ViewModelFactory.getInstance(
+            requireActivity()
+        )
+    }
+
 
     private var token = ""
 
