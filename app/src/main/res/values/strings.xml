@@ -226,4 +226,6 @@ sed do eiusmod tempor.</item>
     <string name="error_email">Not a valid pattern for email</string>
     <string name="start_donation">Mulai donasi sekarang</string>
     <string name="topup">Top Up</string>
+    <string name="jumlah">17</string>
+    <string name="mean">Rata-rata pengunjung</string>
 </resources>
