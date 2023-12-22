@@ -108,11 +108,6 @@ class HomeFragment : Fragment() {
             }
         }
 
-        homeFragment.btnFilter.setOnClickListener {
-            loginViewModel.logout()
-            startActivity(Intent(requireActivity(), LoginActivity::class.java))
-        }
-
         petViewModel.getAbandonedPet()
 
         showRecyclerList()
