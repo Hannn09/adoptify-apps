@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Adoptify"
         tools:targetApi="31">
         <activity
+            android:name=".ui.donation.DonationSuccess"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donation.ConfirmationDonation"
+            android:exported="false" />
+        <activity
             android:name=".ui.shelter.DetailShelterActivity"
             android:exported="false" />
         <activity
@@ -27,12 +33,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.tnc.TermsnConditionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.donation.DonationSuccess"
-            android:exported="false" />
-        <activity
-            android:name=".ui.donation.ConfirmationDonation"
             android:exported="false" />
         <activity
             android:name=".ui.donation.nominal.NominalDonation"

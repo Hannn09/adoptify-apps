@@ -9,6 +9,7 @@ import com.example.adoptify.R
 import com.example.adoptify.databinding.FragmentKonfirmationDonationBinding
 import com.example.adoptify.ui.donation.ConfirmationDonation
 
+
 class NominalDonation: AppCompatActivity(), View.OnClickListener {
 
     private var _donationKonfirmationFragment: FragmentKonfirmationDonationBinding? = null
