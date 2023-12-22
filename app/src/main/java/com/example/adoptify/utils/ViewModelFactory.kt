@@ -7,6 +7,7 @@ import com.example.adoptify.model.AdoptifyRepository
 import com.example.adoptify.ui.login.LoginViewModel
 import com.example.adoptify.ui.pet.PetViewModel
 import com.example.adoptify.ui.register.RegisterViewModel
+import com.example.adoptify.ui.shelter.ShelterViewModel
 
 class ViewModelFactory(private val adoptRepository: AdoptifyRepository) :
     ViewModelProvider.NewInstanceFactory() {
@@ -17,6 +18,8 @@ class ViewModelFactory(private val adoptRepository: AdoptifyRepository) :
             return LoginViewModel(adoptRepository) as T
         } else if (modelClass.isAssignableFrom(PetViewModel::class.java)) {
             return PetViewModel(adoptRepository) as T
+        } else if (modelClass.isAssignableFrom(ShelterViewModel::class.java)) {
+            return ShelterViewModel(adoptRepository) as T
         }
         throw IllegalArgumentException("Unknown View Model class : ${modelClass.name}")
     }

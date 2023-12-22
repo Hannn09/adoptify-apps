@@ -10,6 +10,7 @@ import android.widget.ImageView
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.adoptify.databinding.FragmentHomeBinding
 import com.example.adoptify.model.dummyBanner
 import com.example.adoptify.ui.login.LoginActivity
@@ -18,6 +19,8 @@ import com.example.adoptify.ui.pet.PetViewModel
 import com.example.adoptify.ui.pet.abandoned.AbandonedActivity
 import com.example.adoptify.ui.pet.list.AbandonedPetAdapter
 import com.example.adoptify.ui.pet.list.ListPetActivity
+import com.example.adoptify.ui.shelter.DetailShelterActivity
+import com.example.adoptify.ui.shelter.ShelterViewModel
 import com.example.adoptify.ui.welcome.WelcomeActivity
 import com.example.adoptify.utils.ViewModelFactory
 
@@ -28,12 +31,25 @@ class HomeFragment : Fragment() {
 
     private val homeFragment get() = _homeFragment!!
 
-    private val loginViewModel by activityViewModels<LoginViewModel> { ViewModelFactory.getInstance(requireActivity()) }
+    private val loginViewModel by activityViewModels<LoginViewModel> {
+        ViewModelFactory.getInstance(
+            requireActivity()
+        )
+    }
 
-    private val petViewModel by activityViewModels<PetViewModel> { ViewModelFactory.getInstance(requireActivity()) }
+    private val petViewModel by activityViewModels<PetViewModel> {
+        ViewModelFactory.getInstance(
+            requireActivity()
+        )
+    }
+
+    private val shelterViewModel by activityViewModels<ShelterViewModel> {
+        ViewModelFactory.getInstance(
+            requireActivity()
+        )
+    }
 
     private var token = ""
-
 
 
     override fun onCreateView(
@@ -49,18 +65,23 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val viewPager = homeFragment.itemCaraousel
+        val viewPager: ViewPager2 = homeFragment.itemCaraousel
         val dotsPagerAdapter = homeFragment.dotsIndicator
 
+        shelterViewModel.getShelter()
 
         viewPager.apply {
             clipChildren = false
             clipToPadding = false
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-            adapter = CaraouselAdapter(dummyBanner)
-        }
+            shelterViewModel.shelterResponse.observe(viewLifecycleOwner) {
+                val shelterList = shelterViewModel.shelterResponse.value ?: emptyList()
 
-        dotsPagerAdapter.attachTo(viewPager)
+                adapter = CaraouselAdapter(shelterList.take(5))
+
+                dotsPagerAdapter.attachTo(viewPager)
+            }
+        }
 
 
         val btnCat = homeFragment.btnCategories.btnCat
@@ -106,6 +127,11 @@ class HomeFragment : Fragment() {
             requireActivity().startActivity(intent)
         }
 
+        homeFragment.icAll.setOnClickListener {
+            val intent = Intent(requireActivity(), DetailShelterActivity::class.java)
+            requireActivity().startActivity(intent)
+        }
+
     }
 
     fun setCategoryButtonClickListener(button: ImageView, category: String) {
@@ -118,7 +144,8 @@ class HomeFragment : Fragment() {
 
     private fun showRecyclerList() {
         homeFragment.rvAbandoned.apply {
-            layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
+            layoutManager =
+                LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
             setHasFixedSize(true)
         }
     }

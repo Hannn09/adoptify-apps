@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Adoptify"
         tools:targetApi="31">
         <activity
+            android:name=".ui.shelter.DetailShelterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.pet.abandoned.AbandonedActivity"
             android:exported="false" />
         <activity

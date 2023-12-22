@@ -3,18 +3,22 @@ package com.example.adoptify.ui.home
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.adoptify.databinding.ItemCarouselBinding
 import com.example.adoptify.model.ItemBanner
+import com.example.adoptify.service.response.DataShelter
 
-class CaraouselAdapter(private val caraouselDataList: List<ItemBanner>) : RecyclerView.Adapter<CaraouselAdapter.CaraouselItemViewHolder>() {
+class CaraouselAdapter(private val caraouselDataList: List<DataShelter>) : RecyclerView.Adapter<CaraouselAdapter.CaraouselItemViewHolder>() {
     class CaraouselItemViewHolder(private val itemCarouselBinding: ItemCarouselBinding) : RecyclerView.ViewHolder(itemCarouselBinding.root) {
-        fun bind(item: ItemBanner) {
+        fun bind(item: DataShelter) {
             itemCarouselBinding.apply {
-                petHouse.setImageResource(item.image)
-                namePetHouse.text = item.shelterName
-                descPet.text = item.descShelter
-                distance.text = item.distanceShelter
-                rating.text = item.ratingShelter
+                Glide.with(itemView.context)
+                    .load("https://storage.googleapis.com/adoptify-bucket/Database/image/" + item.gambar)
+                    .into(petHouse)
+                namePetHouse.text = item.namaShelter.split(" ").joinToString(" ") { it.capitalize() }
+                descPet.text = item.deskripsi.split(" ").joinToString(" ") { it.capitalize() }
+                distance.text = item.kategori.split(" ").joinToString(" ") { it.capitalize() }
+                rating.text = item.rating
             }
         }
 

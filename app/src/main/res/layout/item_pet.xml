@@ -82,31 +82,6 @@
         app:layout_constraintEnd_toEndOf="@id/bg_pet"
         app:layout_constraintTop_toBottomOf="@id/line1"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnEditData"
-        android:layout_width="230dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Perbarui Data"
-        android:textAllCaps="false"
-        android:letterSpacing="0"
-        android:background="@drawable/background_button_edit"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:textSize="11sp"
-        app:backgroundTint="#E4E4E4"
-        android:textColor="@color/titleColor"
-        app:layout_constraintTop_toBottomOf="@id/information_pet"
-        app:layout_constraintStart_toStartOf="@id/bg_pet"/>
-    
-    <ImageView
-        android:id="@+id/ic_edit"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="15dp"
-        android:src="@drawable/ic_edit"
-        app:layout_constraintTop_toTopOf="@id/btnEditData"
-        app:layout_constraintBottom_toBottomOf="@id/btnEditData"
-        app:layout_constraintStart_toEndOf="@id/btnEditData"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

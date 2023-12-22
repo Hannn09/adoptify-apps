@@ -324,6 +324,7 @@ class AdoptifyRepository private constructor(
                     val shelter = response.body()?.data
                     if (response.isSuccessful && response.body() != null) {
                         _shelterResponse.value = shelter!!
+                        Log.d(TAG, "data: $shelter")
                     } else {
                         Log.d(TAG, "onResponse: $response")
                     }

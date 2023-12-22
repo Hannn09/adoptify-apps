@@ -27,22 +27,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAddPet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_welcome_button"
-        android:gravity="center"
-        android:text="@string/add_pet"
-        android:layout_marginTop="25dp"
-        android:textAllCaps="false"
-        android:letterSpacing="0"
-        app:iconGravity="textStart"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:textSize="12sp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginBottom="50dp"
-        app:icon="@drawable/ic_add_pet"
-        app:layout_constraintTop_toBottomOf="@id/item_pet"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
